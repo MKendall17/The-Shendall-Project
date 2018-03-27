@@ -1,6 +1,8 @@
 # The Shendall Project
 
-Contributors: Benjamin Shen, Matthew Kendall
+### Personnel
+Matthew Kendall
+Benjamin Shen
 
 ## Statement of problem
 Return the boolean value of the statement “there exists a path through a maze starting at a designated beginning ending at treasure”, where looping is disallowed.
