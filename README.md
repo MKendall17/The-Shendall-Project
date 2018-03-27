@@ -1,7 +1,7 @@
 # The Shendall Project
 
 ### Personnel
-Matthew Kendall
+Matthew Kendall  
 Benjamin Shen
 
 ## Statement of problem
