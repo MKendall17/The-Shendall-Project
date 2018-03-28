@@ -15,11 +15,10 @@ if (current node is treasure) return true
 else if (current node is null or current node is marked) return false  
 
 ## English or pseudocode description of algorithm
+mark current node  
 for each neighboring node:  
 &nbsp;&nbsp;
-  mark current node  
-&nbsp;&nbsp;
-  if (recursive abstraction called on the current node is true) return true  
+  if (recursive abstraction called on this node is true) return true  
 unmark current node  
 return false  
 
