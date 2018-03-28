@@ -12,26 +12,29 @@ When I am asked to evaluate whether there exists a path from a node to the treas
 
 ## Base case
 if (current node is treasure) return true  
-else if (current node is null or current node is marked) return false
+else if (current node is null or current node is marked) return false  
 
 ## English or pseudocode description of algorithm
 for each neighboring node:  
-&nbsp;&nbsp; mark current node  
-&nbsp;&nbsp; if (recursive abstraction called on the current node is true) return true  
+&nbsp;&nbsp;
+  mark current node  
+&nbsp;&nbsp;
+  if (recursive abstraction called on the current node is true) return true  
 unmark current node  
-return false
+return false  
 
 ## Additional notes
-Every node has 4 neighboring nodes; each node has a distinct location and can be null.  
-Marked nodes represent the path that the program is testing.
+Every node has 4 neighboring nodes.  
+Each node has a distinct location and can be null.  
+Marked nodes represent the path that the program is testing.  
 
 ## Classes, with fields and methods
-**Maze**
-**Node**
-**MazeSolver**
-**UserOfMaze**
-**UserOfNode**
-**UserOfMazeSolver**
+**Maze**  
+**Node**  
+**MazeSolver**  
+**UserOfMaze**  
+**UserOfNode**  
+**UserOfMazeSolver**  
 
 ## Version *n* wish list
 * count solution(s)
