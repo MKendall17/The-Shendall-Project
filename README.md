@@ -15,7 +15,7 @@ if (current node is treasure) return true
 else if (current node is a wall) return false  
 
 ## English or pseudocode description of algorithm
-drop a wall on current node 
+drop a wall on current node  
 for each neighboring node:  
 &nbsp;&nbsp;
   if (recursive abstraction called on this node is true) return true  
