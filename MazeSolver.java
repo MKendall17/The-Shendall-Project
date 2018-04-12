@@ -20,6 +20,11 @@ public class MazeSolver {
       solve Maze
      */
     public boolean isThereSolution() {
-        return true;
+        // base case
+	if (inProgress.explorerIsOnA() == Maze.TREASURE) return true;
+	else if (inProgress.explorerIsOnA() == Maze.WALL) return false;
+
+	// recursive case
+	else return true;
     }
 }
