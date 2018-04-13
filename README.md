@@ -32,5 +32,5 @@ Each position has 4 adjacent positions.
 * [ ] encompass non-rectangular mazes
 * [ ] accept diagonally connected nodes as valid paths  
 
-## known bugs
-When typing in the maze that one desires to solve, one cannot write coordinates that are outside of the boundary (e.g. java UserOfMazeSolver mazes/4cell_treasureWest.txt -1 -1  will fail)  
+## Known Bugs
+- When setting explorer coordinates, the client cannot write coordinates that are outside of the boundary (e.g. `java UserOfMazeSolver mazes/4cell_treasureWest.txt -1 -1`  will fail)
