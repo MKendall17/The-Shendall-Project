@@ -20,11 +20,30 @@ public class MazeSolver {
       solve Maze
      */
     public boolean isThereSolution() {
-        // base case
-	if (inProgress.explorerIsOnA() == Maze.TREASURE) return true;
-	else if (inProgress.explorerIsOnA() == Maze.WALL) return false;
+      // base case
+    	if (inProgress.explorerIsOnA() == Maze.TREASURE) return true;
+    	else if (inProgress.explorerIsOnA() == Maze.WALL) return false;
 
-	// recursive case
-	else return true;
+    	// recursive case
+    	else {
+        Maze currentSnapshot = new Maze(inProgress);
+        inProgress.dropA(inProgress.WALL);
+
+        // test the four directions
+        inProgress.go(inProgress.NORTH); 
+        if (isThereSolution() == true) return true;
+        else inProgress = new Maze(currentSnapshot);
+        inProgress.go(inProgress.EAST); 
+        if (isThereSolution() == true) return true;
+        else inProgress = new Maze(currentSnapshot);
+        inProgress.go(inProgress.SOUTH); 
+        if (isThereSolution() == true) return true;
+        else inProgress = new Maze(currentSnapshot);
+        inProgress.go(inProgress.WEST); 
+        if (isThereSolution() == true) return true;
+        else inProgress = new Maze(currentSnapshot);
+
+        return false;
+        }
     }
 }
