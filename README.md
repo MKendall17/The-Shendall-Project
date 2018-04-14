@@ -34,3 +34,7 @@ Each position has 4 adjacent positions.
 
 ## Known Bugs
 - When setting explorer coordinates, the client cannot write coordinates that are outside of the boundary (e.g. `java UserOfMazeSolver mazes/4cell_treasureWest.txt -1 -1`  will fail)
+
+## v1
+- Improved code for MazeSolver.java by using enum
+- Incorporated Displayer.java
