@@ -33,8 +33,9 @@ Each position has 4 adjacent positions.
 * [ ] accept diagonally connected nodes as valid paths  
 
 ## Known Bugs
-- When setting explorer coordinates, the client cannot write coordinates that are outside of the boundary (e.g. `java UserOfMazeSolver mazes/4cell_treasureWest.txt -1 -1`  will fail)
+- The user needs to add *four* arguments when running the code: the maze file, the rank, the file, and the height of the console.
+- When setting the explorer's rank and file, the client cannot write coordinates that are outside of the boundary (e.g. `java UserOfMazeSolver mazes/4cell_treasureWest.txt -1 -1`  will fail)
 
 ## v1
-- Improved code for MazeSolver.java by using enum
+- Improved code for MazeSolver.java by using a for each loop
 - Incorporated Displayer.java

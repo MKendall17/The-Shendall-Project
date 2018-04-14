@@ -3,6 +3,7 @@
  */
 
 public class UserOfMazeSolver {
+    private static Displayer displayer;
 
     public static void main( String[] commandLine) 
 	throws java.io.FileNotFoundException {
@@ -67,11 +68,29 @@ public class UserOfMazeSolver {
                             , Integer.parseInt( commandLine[1])
                             , Integer.parseInt( commandLine[2])
                             );
-        MazeSolver mazeSolver = new MazeSolver(maze);
+        MazeSolver mazeSolver = new MazeSolver(maze, Integer.parseInt( commandLine[3]));
         System.out.println( maze 
                             + System.lineSeparator()
                             + "Can it be solved?"
                             + System.lineSeparator()
                             + mazeSolver.isThereSolution());
+
+    }
+
+    /**
+      Display changes to a maze.
+      Run by using the height of your shell window as a final argument, like...
+          java UserOfMaze mazes/4cell_treasureWest.txt 0 3 25
+     */
+    private static void displayerTest( Maze m) {
+        int step = 0;
+
+        displayer.atTopOfWindow( m + "step " + step++);
+
+        // move past west edge, Displaying as we go
+        while( step < 5) {
+            m.go( Maze.WEST);
+            displayer.atTopOfWindow( m + "step " + step++);
+        }
     }
 }
